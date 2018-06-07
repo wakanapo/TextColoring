@@ -3,12 +3,12 @@
 
 int main() {
   std::cout << "The color variation is "
-            << coloringText("Red, ", RED)
-            << coloringText("Green, ", GREEN)
-            << coloringText("blue, ", BLUE)
-            << coloringText("Yellow, ", YELLOW)
-            << coloringText("Magenta, ", MAGENTA)
-            << coloringText("Cyan, ", CYAN)
-            << coloringText("Black, ", BLACK)
-            << coloringText("White", WHITE) << std::endl;
+            << coloring::coloringText("Red, ", coloring::Color::RED)
+            << coloring::coloringText("Green, ", coloring::Color::GREEN)
+            << coloring::coloringText("blue, ", coloring::Color::BLUE)
+            << coloring::coloringText("Yellow, ", coloring::Color::YELLOW)
+            << coloring::coloringText("Magenta, ", coloring::Color::MAGENTA)
+            << coloring::coloringText("Cyan, ", coloring::Color::CYAN)
+            << coloring::coloringText("Black, ", coloring::Color::BLACK)
+            << coloring::coloringText("White", coloring::Color::WHITE) << std::endl;
 }
