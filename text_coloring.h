@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <sstream>
 
+namespace coloring {
+
 enum Color {
   BLACK,
   RED,
@@ -30,3 +32,5 @@ std::string coloringText(std::string str, Color c) {
   ss << getColorCode(c) << str << getColorCode(DEFAULT);
   return ss.str();
 }
+
+}  // namespace coloring
