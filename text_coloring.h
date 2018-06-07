@@ -10,24 +10,16 @@ enum Color {
   BLUE,
   MAGENTA,
   CYAN,
-  LIGHT_GRAY,
+  WHITE,
   DUMMY,
   DEFAULT,
-  DARK_GRAY,
-  LIGHT_RED,
-  LIGHT_GREEN,
-  LIGHT_YELLOW,
-  LIGHT_BLUE,
-  LIGHT_MAGENTA,
-  LIGHT_CYAN,
-  WHITE
 };
 
 namespace {
-  char textcolor[] = {0x1b, '[', '1', ';'};
+  char textcolor[] = {0x1b, '[', '1', ';', '3'};
   std::string getColorCode(Color c) {
     std::stringstream ss;
-    ss << textcolor << (c < 10 ? 30 + c : 80 + c) << "m";
+    ss << textcolor << c << "m";
     return ss.str();
   }
 }  // namespace
